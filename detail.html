@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #item {
+            position: relative;
+            width: 640px;
+            height: auto;
+            padding: 15px 20px;
+            margin: 10px auto;
+            border: 1px solid red;
+            float: left;
+            margin-right: 5px;
+        }
+        button {
+            background: rgba(255,255,255,0.7);
+            padding: 5px;
+            border: 1px solid #ccc;
+
+        }
+        .over {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+        }
+        .detail {
+            text-align: justify;
+            line-height: 1.8em;
+            display: none;
+        }
+        #item1 {
+            position: relative;
+            width: 640px;
+            height: auto;
+            padding: 15px 20px;
+            margin: 10px auto;
+            border: 1px solid red;
+            float: left;
+        }
+    </style>
+    <title>상세내용보기</title>
+</head>
+<body>
+    <div id="item">
+        <img src="img/tree-1.png" alt="">
+        <button id="open" class="over" onclick="showDetail();">상세 설명보기</button>
+        <div id="sangse" class="detail" onclick="hideDetail();">
+            <h4>Christmas Circle Ornament</h4>
+            <p>
+                imagine magical christmas with limited edition ornament! try to decorate attractive tree for christmas atmosphere. you can give this edition to someone, including candy, cookies, chocolate. also if you decorate to ornament, you can make a special tree. try to make attractive space~<br><br>
+                크리스마스를 연상케하는 한정판 에디션! 낭만적인 크리스마스 분위기 연출을 위해 예쁘게 장식해보세요. 캔디나 초콜릿, 쿠키를 담아 선물용으로 좋습니다. 오너먼트로 장식하면, 아주 특별한 트리가 완성된답니다. 작은 소품 하나로 매력적인 공간을 만들어보세요~<br><br></p>
+            <button id="close">상세설명 닫기</button>
+        </div>
+    </div>
+
+    <div id="item1">
+        <img src="img/tree-2.png" alt="">
+        <button id="open2" class="over" onclick="showDetails();">상세설명보기</button>
+        <div id="sangse2" class="detail">
+            <h4>Christmas Snowman Ornament</h4>
+            <p>
+                it is the snowman ornament to use christmas tree. it is so adorable and cute, wherever we can use. this is very popular things for party prop or christmas ornament. if you want to make a magical christmas, hang it up everywhere you want and use this to produce colorful christmas atmosphere!<br><br>크리스마스 장식으로 사용하기 좋은 눈사람 오너먼트입니다. 아기자기하고 귀여워 어디에서나 잘 어울린답니다. 파티소품으로나 크리스마스 오너먼트로도 인기만점!! 장식하고 싶은 장소에 걸어 화려하게 크리스마스파티 분위기를 연출해보세요.<br><br>
+            </p>
+            <button onclick="hideDetails();">상세설명 닫기</button>
+        </div>
+    </div>
+    <!-- 자바스크립트 삽입  -->
+    <script>
+        function showDetail(){
+            document.querySelector('#sangse').style.display='block';
+            document.querySelector('#open').style.display='none'
+        }
+
+        function hideDetail(){
+            document.querySelector('#sangse').style.display='none';
+            document.querySelector('#open').style.display = 'block'
+        }
+
+        function showDetails(){
+            document.querySelector('#sangse2').style.display='block';
+            document.querySelector('#open2').style.display='none'
+        }
+
+        function hideDetails(){
+            document.querySelector('#sangse2').style.display='none'
+            document.querySelector('#open2').style.display='block'
+        }
+    </script>
+</body>
+</html>
